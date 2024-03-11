@@ -1,0 +1,39 @@
+gpu: "5"
+multi_gpu: null
+
+model_name: PointConv
+
+full: False
+
+evaluate: True
+resume: True
+ckpt_dir: ./pretrain_weights/PointConv/
+arch: Separable
+last_relu: False
+allow_less_points: False
+
+# general args
+batch_size: 1
+pretrain: StarFlow_819_0.0141.pth
+dim: 3
+num_points: 8192
+
+DEVICE: cuda
+
+dataset: KITTI # FlyingThings3DSubset KITTI LidarKITTI
+data_root: /data2/user9/data/SceneFlow
+
+data_process:
+  DEPTH_THRESHOLD: 35.
+  NO_CORR: True
+
+# miscalleneous
+workers: 4
+
+
+
+
+
+
+
+
